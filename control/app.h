@@ -11,7 +11,7 @@ public:
     void createObjects();
     static int main(int argc, char *argv[]);
     int run(int argc, char *argv[]);
-    void setupConnections();
+    void connectObjects();
 
     QSharedPointer<Count> mModel;
     MainWindow *mMainWindowView;

@@ -25,13 +25,13 @@ int App::run(int argc, char *argv[])
     QApplication qapp(argc, argv);
 	// NB: Parse cli here with QCommandLineParser.
     createObjects();
-    setupConnections();
+    connectObjects();
     mMainWindowView->show();
 
     return qapp.exec();
 }
 
-void App::setupConnections()
+void App::connectObjects()
 {
     mCounterController->setModel(mModel);
     QObject::connect(mCounterController, SIGNAL(valueChanged(int)),
